@@ -48,14 +48,14 @@ const TestimonialSection = () => {
                     </svg>
                   </div>
                   
-                  <p className="text-lg mb-8 flex-grow">{testimonial.quote}</p>
+                  <p className="text-lg mb-8 flex-grow text-white">{testimonial.quote}</p>
                   
                   <div className="flex items-center mt-auto">
                     <Avatar className="h-12 w-12 border-2 border-white/20">
                       <AvatarFallback className="bg-primary/20 text-white">{testimonial.avatar}</AvatarFallback>
                     </Avatar>
                     <div className="ml-4">
-                      <p className="font-semibold">{testimonial.author}</p>
+                      <p className="font-semibold text-white">{testimonial.author}</p>
                       <p className="text-sm text-white/70">{testimonial.role}</p>
                     </div>
                   </div>
