@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -8,10 +9,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-6">
-              <div className="h-8 mr-3">
+              <Link to="/" className="h-8">
                 <img src="/lovable-uploads/0c61eecc-b066-4207-b9d3-67a675d00c66.png" alt="StellarVote Logo" className="h-full" />
-              </div>
-              <span className="text-xl font-bold gradient-heading">StellarVote</span>
+              </Link>
             </div>
             <p className="text-gray-600 max-w-xs">
               Turn your followers' opinions into influence, insights & brand deals.
@@ -41,7 +41,8 @@ const Footer = () => {
               <li><a href="#features" className="text-gray-600 hover:text-primary transition-colors">Features</a></li>
               <li><a href="#how-it-works" className="text-gray-600 hover:text-primary transition-colors">How It Works</a></li>
               <li><a href="#testimonials" className="text-gray-600 hover:text-primary transition-colors">Testimonials</a></li>
-              <li><a href="/brands" className="text-gray-600 hover:text-primary transition-colors">For Brands</a></li>
+              <li><Link to="/brands" className="text-gray-600 hover:text-primary transition-colors">For Brands</Link></li>
+              <li><Link to="/influencers" className="text-gray-600 hover:text-primary transition-colors">For Influencers</Link></li>
               <li><a href="#" className="text-gray-600 hover:text-primary transition-colors">About</a></li>
               <li><a href="#" className="text-gray-600 hover:text-primary transition-colors">Contact</a></li>
             </ul>
