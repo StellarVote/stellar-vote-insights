@@ -1,6 +1,6 @@
 
 import React from 'react';
-import WaitlistForm from './WaitlistForm';
+import TallyForm from './TallyForm';
 
 const CallToAction = () => {
   return (
@@ -19,7 +19,7 @@ const CallToAction = () => {
               Join the waitlist today and be notified when StellarVote launches. Get early access and turn your followers' opinions into valuable insights.
             </p>
             <div className="pt-6 max-w-lg mx-auto">
-              <WaitlistForm />
+              <TallyForm />
             </div>
           </div>
         </div>

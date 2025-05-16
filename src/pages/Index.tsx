@@ -18,7 +18,9 @@ const Index = () => {
         <FeatureSection />
         <HowItWorksSection />
         <TestimonialSection />
-        <CallToAction />
+        <div id="waitlist">
+          <CallToAction />
+        </div>
       </main>
       <Footer />
       <Toaster />

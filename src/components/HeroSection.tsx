@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Vote, BarChart, TrendingUp } from 'lucide-react';
-import WaitlistForm from './WaitlistForm';
+import TallyForm from './TallyForm';
 
 const HeroSection = () => {
   return (
@@ -28,7 +28,7 @@ const HeroSection = () => {
             </div>
             
             <div className="fade-in" style={{ animationDelay: '200ms' }}>
-              <WaitlistForm />
+              <TallyForm />
             </div>
             
             <div className="flex flex-col sm:flex-row gap-6 pt-6 text-sm text-gray-500 fade-in" style={{ animationDelay: '400ms' }}>
