@@ -29,7 +29,7 @@ const Header = () => {
     <header className={`w-full py-3 md:py-4 px-4 md:px-12 lg:px-20 flex items-center justify-between z-20 sticky top-0 transition-all duration-200 ${isScrolled ? 'bg-white/95 shadow-sm backdrop-blur-sm' : 'bg-white/90 backdrop-blur-sm'}`}>
       <div className="flex items-center">
         <Link to="/" className="h-8 md:h-10">
-          <img src="/lovable-uploads/0c61eecc-b066-4207-b9d3-67a675d00c66.png" alt="StellarVote Logo" className="h-full" />
+          <img src="/lovable-uploads/d3338b83-6a24-4fbf-a604-35b7b7087f2e.png" alt="StellarVote Logo" className="h-full" />
         </Link>
       </div>
       

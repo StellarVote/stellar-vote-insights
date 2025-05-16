@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Instagram } from 'lucide-react';
@@ -11,7 +10,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-6">
               <Link to="/" className="h-8">
-                <img src="/lovable-uploads/0c61eecc-b066-4207-b9d3-67a675d00c66.png" alt="StellarVote Logo" className="h-full" />
+                <img src="/lovable-uploads/d3338b83-6a24-4fbf-a604-35b7b7087f2e.png" alt="StellarVote Logo" className="h-full" />
               </Link>
             </div>
             <p className="text-gray-600 text-sm md:text-base max-w-xs">
