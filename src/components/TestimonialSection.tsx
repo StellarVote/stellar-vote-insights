@@ -7,19 +7,19 @@ const testimonials = [
   {
     quote: "StellarVote has been a game-changer for my brand deals. Now I can show companies exactly what my audience thinks about their products.",
     author: "Alex Morgan",
-    role: "Travel Influencer, 500K Followers",
+    role: "Travel Influencer, 125K Followers",
     avatar: "AM"
   },
   {
     quote: "I used to guess what my audience wanted. Now I know exactly what they're interested in, and my engagement has gone through the roof!",
     author: "Jamie Lee",
-    role: "Lifestyle Creator, 1.2M Followers",
+    role: "Lifestyle Creator, 200K Followers",
     avatar: "JL"
   },
   {
-    quote: "The analytics from StellarVote helped me secure a 6-figure brand deal by proving my audience's interest in their new product line.",
+    quote: "The analytics from StellarVote helped me secure a brand deal by proving my audience's interest in their new product line.",
     author: "Raj Patel",
-    role: "Tech Reviewer, 750K Subscribers",
+    role: "Tech Reviewer, 80K Subscribers",
     avatar: "RP"
   }
 ];

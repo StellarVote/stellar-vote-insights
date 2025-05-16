@@ -34,15 +34,15 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-6 pt-6 text-sm text-gray-500 fade-in" style={{ animationDelay: '400ms' }}>
               <div className="flex items-center gap-2">
                 <Vote className="h-5 w-5 text-purple-500" />
-                <span>5,000+ Polls Created</span>
+                <span>1,200+ Polls Created</span>
               </div>
               <div className="flex items-center gap-2">
                 <BarChart className="h-5 w-5 text-purple-500" />
-                <span>3M+ Votes Collected</span>
+                <span>500K+ Votes Collected</span>
               </div>
               <div className="flex items-center gap-2">
                 <TrendingUp className="h-5 w-5 text-purple-500" />
-                <span>2,000+ Influencer Success Stories</span>
+                <span>400+ Influencer Success Stories</span>
               </div>
             </div>
           </div>
