@@ -14,16 +14,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222 89% 4%;
+    --primary: 262 83% 58%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 217 0% 98%;
+    --secondary: 250 45% 95%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 222 89% 4%;
+    --accent: 262 83% 58%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -31,7 +31,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222 89% 4%;
+    --ring: 262 83% 58%;
 
     --radius: 0.5rem;
 
@@ -97,11 +97,11 @@
 
 @layer utilities {
   .gradient-heading {
-    @apply bg-black text-black;
+    @apply bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 bg-clip-text text-transparent;
   }
   
   .gradient-bg {
-    @apply bg-black text-white;
+    @apply bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-700;
   }
   
   .scale-up-hover {
@@ -121,21 +121,5 @@
       opacity: 1;
       transform: translateY(0);
     }
-  }
-  
-  .bolt-button {
-    @apply rounded-full bg-black text-white font-semibold px-6 py-4 transition-transform hover:scale-[1.02] active:scale-[0.98] duration-200;
-  }
-  
-  .bolt-card {
-    @apply bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden;
-  }
-  
-  .bolt-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
-  
-  .bolt-section {
-    @apply py-16 md:py-24;
   }
 }

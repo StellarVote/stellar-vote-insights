@@ -26,8 +26,8 @@ const testimonials = [
 
 const TestimonialSection = () => {
   return (
-    <section id="testimonials" className="bolt-section bg-black text-white">
-      <div className="bolt-container">
+    <section id="testimonials" className="py-20 px-6 md:px-12 lg:px-20 gradient-bg text-white">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Loved by Influencers Everywhere
@@ -39,7 +39,7 @@ const TestimonialSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-gray-900/80 border-gray-800 scale-up-hover fade-in rounded-2xl" style={{ animationDelay: `${index * 100}ms` }}>
+            <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 scale-up-hover fade-in" style={{ animationDelay: `${index * 100}ms` }}>
               <CardContent className="p-8">
                 <div className="flex flex-col h-full">
                   <div className="mb-6">
@@ -51,8 +51,8 @@ const TestimonialSection = () => {
                   <p className="text-lg mb-8 flex-grow text-white">{testimonial.quote}</p>
                   
                   <div className="flex items-center mt-auto">
-                    <Avatar className="h-12 w-12 border-2 border-gray-700">
-                      <AvatarFallback className="bg-gray-800 text-white">{testimonial.avatar}</AvatarFallback>
+                    <Avatar className="h-12 w-12 border-2 border-white/20">
+                      <AvatarFallback className="bg-primary/20 text-white">{testimonial.avatar}</AvatarFallback>
                     </Avatar>
                     <div className="ml-4">
                       <p className="font-semibold text-white">{testimonial.author}</p>
