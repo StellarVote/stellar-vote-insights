@@ -1,7 +1,8 @@
+
 import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { CheckCircle, BarChart3, UserCheck, TrendingUp, Award } from 'lucide-react';
+import { CheckCircle, BarChart3, UserCheck, TrendingUp, Award, PieChart, Users, MessageCircle, Bell, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Toaster } from '@/components/ui/toaster';
@@ -65,10 +66,148 @@ const BrandsPage = () => {
                 </div>
               </div>
               <div className="flex-1 relative">
+                {/* Detailed Brand Dashboard Mockup */}
                 <div className="relative w-full aspect-[4/3] bg-white rounded-xl shadow-lg overflow-hidden fade-in border border-gray-200" style={{ animationDelay: '300ms' }}>
-                  <div className="absolute inset-0 flex items-center justify-center p-6">
-                    <div className="w-full h-full bg-gradient-to-br from-purple-50 to-indigo-50 rounded-lg flex items-center justify-center">
-                      <BarChart3 className="w-24 h-24 text-purple-500 opacity-80" />
+                  <div className="absolute inset-0 flex flex-col">
+                    {/* Dashboard header */}
+                    <div className="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-purple-600 rounded-md flex items-center justify-center">
+                          <BarChart3 className="w-5 h-5 text-white" />
+                        </div>
+                        <h3 className="font-semibold text-gray-800">Brand Analytics Dashboard</h3>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
+                          <Bell className="w-4 h-4 text-gray-500" />
+                        </div>
+                        <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                          <span className="text-sm font-medium text-purple-600">BR</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Dashboard content */}
+                    <div className="flex-1 grid grid-cols-3 gap-4 p-6 bg-gray-50">
+                      {/* Left column */}
+                      <div className="col-span-2 space-y-4">
+                        {/* Stats cards */}
+                        <div className="grid grid-cols-3 gap-4">
+                          <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                            <div className="text-sm text-gray-500 mb-1">Total Reach</div>
+                            <div className="text-xl font-semibold">4.7M</div>
+                            <div className="flex items-center text-xs text-green-600 mt-2">
+                              <span className="flex items-center"><TrendingUp className="w-3 h-3 mr-1" />+12.4%</span>
+                            </div>
+                          </div>
+                          <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                            <div className="text-sm text-gray-500 mb-1">Engagement</div>
+                            <div className="text-xl font-semibold">328K</div>
+                            <div className="flex items-center text-xs text-green-600 mt-2">
+                              <span className="flex items-center"><TrendingUp className="w-3 h-3 mr-1" />+8.2%</span>
+                            </div>
+                          </div>
+                          <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                            <div className="text-sm text-gray-500 mb-1">Conversions</div>
+                            <div className="text-xl font-semibold">15.3K</div>
+                            <div className="flex items-center text-xs text-green-600 mt-2">
+                              <span className="flex items-center"><TrendingUp className="w-3 h-3 mr-1" />+21.6%</span>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        {/* Chart */}
+                        <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100 h-48 flex flex-col">
+                          <div className="flex justify-between items-center mb-4">
+                            <h4 className="font-medium text-gray-700">Campaign Performance</h4>
+                            <div className="flex gap-2">
+                              <div className="text-xs px-2 py-1 bg-purple-100 text-purple-700 rounded">Weekly</div>
+                              <div className="text-xs px-2 py-1 bg-gray-100 text-gray-500 rounded">Monthly</div>
+                            </div>
+                          </div>
+                          
+                          {/* Chart mockup */}
+                          <div className="flex-1 flex items-end">
+                            <div className="w-full grid grid-cols-7 gap-2 h-32">
+                              {[40, 65, 45, 80, 60, 75, 90].map((height, index) => (
+                                <div key={index} className="flex flex-col items-center">
+                                  <div className="w-full bg-purple-100 rounded-sm" style={{ height: `${height}%` }}>
+                                    <div className="w-full bg-purple-500 rounded-sm" style={{ height: `${height * 0.65}%` }}></div>
+                                  </div>
+                                  <span className="text-xs text-gray-400 mt-1">D{index + 1}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Right column */}
+                      <div className="space-y-4">
+                        {/* Audience insights */}
+                        <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                          <h4 className="font-medium text-gray-700 mb-3">Audience Insights</h4>
+                          
+                          <div className="space-y-3">
+                            <div>
+                              <div className="flex justify-between items-center text-sm">
+                                <span className="text-gray-500">Female</span>
+                                <span className="text-gray-700">68%</span>
+                              </div>
+                              <div className="w-full h-2 bg-gray-100 rounded-full mt-1">
+                                <div className="h-2 bg-purple-500 rounded-full" style={{ width: '68%' }}></div>
+                              </div>
+                            </div>
+                            
+                            <div>
+                              <div className="flex justify-between items-center text-sm">
+                                <span className="text-gray-500">Male</span>
+                                <span className="text-gray-700">32%</span>
+                              </div>
+                              <div className="w-full h-2 bg-gray-100 rounded-full mt-1">
+                                <div className="h-2 bg-purple-500 rounded-full" style={{ width: '32%' }}></div>
+                              </div>
+                            </div>
+                            
+                            <div className="pt-2">
+                              <div className="text-xs text-gray-500 mb-2">Age Groups</div>
+                              <div className="grid grid-cols-3 gap-1">
+                                <div className="text-center p-1 bg-purple-100 rounded">
+                                  <div className="text-xs font-medium text-purple-700">18-24</div>
+                                  <div className="text-xs text-gray-500">32%</div>
+                                </div>
+                                <div className="text-center p-1 bg-purple-200 rounded">
+                                  <div className="text-xs font-medium text-purple-700">25-34</div>
+                                  <div className="text-xs text-gray-500">45%</div>
+                                </div>
+                                <div className="text-center p-1 bg-purple-100 rounded">
+                                  <div className="text-xs font-medium text-purple-700">35-44</div>
+                                  <div className="text-xs text-gray-500">23%</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        {/* Top interests */}
+                        <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                          <h4 className="font-medium text-gray-700 mb-3">Top Interests</h4>
+                          <div className="space-y-2">
+                            <div className="bg-gray-50 rounded px-3 py-2 text-sm flex justify-between">
+                              <span>Beauty & Skincare</span>
+                              <span className="font-medium">76%</span>
+                            </div>
+                            <div className="bg-gray-50 rounded px-3 py-2 text-sm flex justify-between">
+                              <span>Wellness</span>
+                              <span className="font-medium">64%</span>
+                            </div>
+                            <div className="bg-gray-50 rounded px-3 py-2 text-sm flex justify-between">
+                              <span>Sustainable Living</span>
+                              <span className="font-medium">58%</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

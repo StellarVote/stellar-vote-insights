@@ -121,28 +121,6 @@ const About = () => {
           </div>
         </section>
         
-        {/* Team Section (Placeholder) */}
-        <section className="py-20 px-6 md:px-12 lg:px-20">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl font-bold gradient-heading mb-16">Our Team</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
-              StellarVote is built by a team of passionate creators, developers, and data analysts 
-              who understand the challenges faced by today's influencers.
-            </p>
-            
-            {/* Team grid placeholder - you can replace this with actual team members later */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[1, 2, 3].map((index) => (
-                <div key={index} className="flex flex-col items-center">
-                  <div className="w-32 h-32 bg-purple-100 rounded-full mb-4"></div>
-                  <h3 className="text-lg font-medium">Team Member {index}</h3>
-                  <p className="text-gray-500">Position</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        
         {/* CTA Section */}
         <section className="py-16 px-6 md:px-12 lg:px-20 bg-purple-50">
           <div className="max-w-4xl mx-auto text-center space-y-8">
