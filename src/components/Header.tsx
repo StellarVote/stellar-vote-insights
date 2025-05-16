@@ -14,8 +14,8 @@ const Header = () => {
         <a href="#testimonials" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">Testimonials</a>
       </nav>
       <div className="flex items-center space-x-4">
-        <Button variant="outline" className="hidden md:inline-flex">Log In</Button>
-        <Button className="gradient-bg">Get Started</Button>
+        <Button variant="outline" className="hidden md:inline-flex">Contact</Button>
+        <Button className="gradient-bg">Join Waitlist</Button>
       </div>
     </header>
   );

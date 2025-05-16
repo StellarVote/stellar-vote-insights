@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
+import WaitlistForm from './WaitlistForm';
 
 const CallToAction = () => {
   return (
@@ -13,16 +13,13 @@ const CallToAction = () => {
           
           <div className="relative z-10 space-y-6 fade-in">
             <h2 className="text-3xl md:text-4xl font-bold gradient-heading">
-              Ready to Transform Your Audience Engagement?
+              Be Among the First to Transform Your Audience Engagement
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Join thousands of influencers who are using StellarVote to understand their audience 
-              and secure better brand partnerships.
+              Join the waitlist today and be notified when StellarVote launches. Get early access and turn your followers' opinions into valuable insights.
             </p>
-            <div className="pt-6">
-              <Button size="lg" className="gradient-bg">
-                Get Started — It's Free
-              </Button>
+            <div className="pt-6 max-w-lg mx-auto">
+              <WaitlistForm />
             </div>
           </div>
         </div>
