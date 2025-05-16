@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { CheckCircle, BarChart3, UserCheck, TrendingUp, Award } from 'lucide-react';
@@ -14,6 +13,31 @@ const BrandsPage = () => {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  useEffect(() => {
+    // Initialize Tally Forms
+    const initializeTallyForms = () => {
+      if (typeof (window as any).Tally !== 'undefined') {
+        (window as any).Tally.loadEmbeds();
+      } else {
+        document.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((iframe) => {
+          iframe.setAttribute('src', iframe.getAttribute('data-tally-src') || '');
+        });
+      }
+    };
+
+    // Load the Tally script if it's not already loaded
+    const tallyWidgetUrl = "https://tally.so/widgets/embed.js";
+    if (!document.querySelector(`script[src="${tallyWidgetUrl}"]`)) {
+      const script = document.createElement("script");
+      script.src = tallyWidgetUrl;
+      script.onload = initializeTallyForms;
+      script.onerror = initializeTallyForms;
+      document.body.appendChild(script);
+    } else {
+      initializeTallyForms();
+    }
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -36,7 +60,7 @@ const BrandsPage = () => {
                     StellarVote helps brands connect with the right influencers based on verified audience data and real engagement metrics.
                   </p>
                   <div className="pt-4">
-                    <Button className="gradient-bg text-lg" onClick={scrollToContact}>Get in Touch</Button>
+                    <button className="gradient-bg text-lg text-white px-6 py-3 rounded-lg" onClick={scrollToContact}>Get in Touch</button>
                   </div>
                 </div>
               </div>
@@ -169,7 +193,7 @@ const BrandsPage = () => {
           </div>
         </section>
 
-        {/* Contact Section */}
+        {/* Contact Section with Tally Form */}
         <section id="contact" className="py-24 px-6 md:px-12 lg:px-20">
           <div className="max-w-5xl mx-auto text-center">
             <div className="bg-secondary rounded-3xl p-12 relative overflow-hidden shadow-xl">
@@ -185,10 +209,16 @@ const BrandsPage = () => {
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                   Get in touch with our brand partnerships team to discover how StellarVote can help you find the perfect creators for your next campaign.
                 </p>
-                <div className="pt-6">
-                  <Button className="gradient-bg text-lg px-8 py-6" size="lg">
-                    Contact Our Brand Team
-                  </Button>
+                <div className="pt-6 max-w-md mx-auto">
+                  <iframe 
+                    data-tally-src="https://tally.so/embed/m65K6J?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+                    loading="lazy" 
+                    width="100%" 
+                    height="177" 
+                    frameBorder="0" 
+                    title="Sales Contact"
+                    className="bg-transparent">
+                  </iframe>
                 </div>
               </div>
             </div>

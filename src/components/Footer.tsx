@@ -38,9 +38,6 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-gray-900 mb-4">Links</h3>
             <ul className="space-y-3">
-              <li><a href="#features" className="text-gray-600 hover:text-primary transition-colors">Features</a></li>
-              <li><a href="#how-it-works" className="text-gray-600 hover:text-primary transition-colors">How It Works</a></li>
-              <li><a href="#testimonials" className="text-gray-600 hover:text-primary transition-colors">Testimonials</a></li>
               <li><Link to="/brands" className="text-gray-600 hover:text-primary transition-colors">For Brands</Link></li>
               <li><Link to="/influencers" className="text-gray-600 hover:text-primary transition-colors">For Influencers</Link></li>
               <li><a href="#" className="text-gray-600 hover:text-primary transition-colors">About</a></li>

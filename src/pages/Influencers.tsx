@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { CheckCircle, Users, MessageCircle, CreditCard, Star } from 'lucide-react';
@@ -14,6 +13,31 @@ const InfluencersPage = () => {
       waitlistSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  useEffect(() => {
+    // Initialize Tally Forms
+    const initializeTallyForms = () => {
+      if (typeof (window as any).Tally !== 'undefined') {
+        (window as any).Tally.loadEmbeds();
+      } else {
+        document.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((iframe) => {
+          iframe.setAttribute('src', iframe.getAttribute('data-tally-src') || '');
+        });
+      }
+    };
+
+    // Load the Tally script if it's not already loaded
+    const tallyWidgetUrl = "https://tally.so/widgets/embed.js";
+    if (!document.querySelector(`script[src="${tallyWidgetUrl}"]`)) {
+      const script = document.createElement("script");
+      script.src = tallyWidgetUrl;
+      script.onload = initializeTallyForms;
+      script.onerror = initializeTallyForms;
+      document.body.appendChild(script);
+    } else {
+      initializeTallyForms();
+    }
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -238,7 +262,7 @@ const InfluencersPage = () => {
           </div>
         </section>
 
-        {/* Waitlist CTA */}
+        {/* Waitlist CTA with Tally Form */}
         <section id="waitlist" className="py-24 px-6 md:px-12 lg:px-20">
           <div className="max-w-5xl mx-auto text-center">
             <div className="bg-secondary rounded-3xl p-12 relative overflow-hidden shadow-xl">
@@ -261,17 +285,9 @@ const InfluencersPage = () => {
                     width="100%" 
                     height="319" 
                     frameBorder="0" 
-                    marginHeight={0} 
-                    marginWidth={0} 
-                    title="StellarVote Waitlist">
+                    title="StellarVote Waitlist"
+                    className="bg-transparent">
                   </iframe>
-                  <script
-                    dangerouslySetInnerHTML={{
-                      __html: `
-                        var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}
-                      `
-                    }}
-                  />
                 </div>
               </div>
             </div>
