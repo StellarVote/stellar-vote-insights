@@ -29,11 +29,46 @@ const About = () => {
                 </div>
               </div>
               <div className="flex-1 relative fade-in" style={{ animationDelay: '200ms' }}>
-                <img 
-                  src="/lovable-uploads/screenshot.png" 
-                  alt="StellarVote Dashboard" 
-                  className="rounded-xl shadow-lg w-full object-cover"
-                />
+                {/* Dashboard example visualization */}
+                <div className="relative w-full aspect-[4/3] bg-gradient-to-br from-purple-50 to-indigo-100 rounded-xl shadow-lg overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-4/5 h-4/5 bg-white rounded-lg shadow-md p-4 flex flex-col">
+                      {/* Dashboard header */}
+                      <div className="h-1/6 border-b border-gray-100 flex items-center">
+                        <div className="w-1/3 h-6 bg-purple-100 rounded-full"></div>
+                      </div>
+                      
+                      {/* Dashboard content */}
+                      <div className="flex-1 grid grid-cols-2 gap-4 p-4">
+                        <div className="bg-purple-50 rounded-lg p-3">
+                          <div className="w-full h-4 bg-purple-200 rounded-full mb-2"></div>
+                          <div className="w-3/4 h-20 bg-purple-100 rounded-lg"></div>
+                        </div>
+                        <div className="bg-indigo-50 rounded-lg p-3">
+                          <div className="w-full h-4 bg-indigo-200 rounded-full mb-2"></div>
+                          <div className="w-3/4 h-20 bg-indigo-100 rounded-lg"></div>
+                        </div>
+                        <div className="bg-violet-50 rounded-lg p-3">
+                          <div className="w-full h-4 bg-violet-200 rounded-full mb-2"></div>
+                          <div className="w-3/4 h-20 bg-violet-100 rounded-lg"></div>
+                        </div>
+                        <div className="bg-fuchsia-50 rounded-lg p-3">
+                          <div className="w-full h-4 bg-fuchsia-200 rounded-full mb-2"></div>
+                          <div className="w-3/4 h-20 bg-fuchsia-100 rounded-lg"></div>
+                        </div>
+                      </div>
+                      
+                      {/* Dashboard footer */}
+                      <div className="h-1/6 border-t border-gray-100 flex items-center justify-center">
+                        <div className="w-1/2 h-6 bg-purple-200 rounded-full"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Decorative elements */}
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-purple-100 rounded-full z-[-1]"></div>
+                <div className="absolute -top-6 -left-6 w-24 h-24 bg-indigo-100 rounded-full z-[-1]"></div>
               </div>
             </div>
           </div>
