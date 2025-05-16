@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import FeatureSection from '@/components/FeatureSection';
+import DashboardPreview from '@/components/DashboardPreview';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import TestimonialSection from '@/components/TestimonialSection';
 import CallToAction from '@/components/CallToAction';
@@ -16,6 +17,7 @@ const Index = () => {
       <main className="flex-grow">
         <HeroSection />
         <FeatureSection />
+        <DashboardPreview />
         <HowItWorksSection />
         <TestimonialSection />
         <div id="waitlist">
