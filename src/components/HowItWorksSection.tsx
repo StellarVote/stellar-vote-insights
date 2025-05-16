@@ -7,35 +7,35 @@ const steps = [
     number: "01",
     title: "Create Your Poll",
     description: "Design a quick poll about trending topics, brands, or products in just a few clicks.",
-    color: "from-purple-400 to-purple-600"
+    color: "bg-black"
   },
   {
     number: "02",
     title: "Share with Followers",
     description: "Share your poll across your social media channels with a single link.",
-    color: "from-violet-400 to-violet-600"
+    color: "bg-black"
   },
   {
     number: "03",
     title: "Collect Responses",
     description: "Watch as your audience votes and engages with your content in real-time.",
-    color: "from-indigo-400 to-indigo-600"
+    color: "bg-black"
   },
   {
     number: "04",
     title: "Analyze the Results",
     description: "Get detailed insights about your audience's preferences and opinions.",
-    color: "from-fuchsia-400 to-fuchsia-600"
+    color: "bg-black"
   }
 ];
 
 const HowItWorksSection = () => {
   return (
-    <section id="how-it-works" className="py-20 px-6 md:px-12 lg:px-20">
-      <div className="max-w-7xl mx-auto">
+    <section id="how-it-works" className="bolt-section bg-white">
+      <div className="bolt-container">
         <div className="text-center mb-16 fade-in">
-          <Badge variant="outline" className="mb-4 text-purple-600 border-purple-200 bg-purple-50 hover:bg-purple-100">Simple Process</Badge>
-          <h2 className="text-3xl md:text-4xl font-bold gradient-heading mb-4">
+          <Badge variant="outline" className="mb-4 text-black border-gray-200 bg-gray-50">Simple Process</Badge>
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
             How StellarVote Works
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -46,10 +46,10 @@ const HowItWorksSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
             <div key={index} className="relative fade-in" style={{ animationDelay: `${index * 150}ms` }}>
-              <div className={`h-2 w-full bg-gradient-to-r ${step.color} rounded-full mb-8 hidden lg:block ${index === steps.length - 1 ? 'opacity-0' : ''}`}></div>
+              <div className={`h-1 w-full bg-gray-200 rounded-full mb-8 hidden lg:block ${index === steps.length - 1 ? 'opacity-0' : ''}`}></div>
               
-              <div className="flex flex-col p-6 bg-white rounded-xl border border-gray-100 shadow-sm h-full">
-                <div className={`w-12 h-12 mb-6 flex items-center justify-center rounded-lg bg-gradient-to-r ${step.color} text-white font-bold`}>
+              <div className="flex flex-col p-6 bg-white rounded-2xl border border-gray-100 shadow-sm h-full">
+                <div className={`w-12 h-12 mb-6 flex items-center justify-center rounded-lg ${step.color} text-white font-bold`}>
                   {step.number}
                 </div>
                 <h3 className="text-xl font-bold mb-3">{step.title}</h3>
@@ -57,8 +57,8 @@ const HowItWorksSection = () => {
               </div>
               
               {index < steps.length - 1 && (
-                <div className="hidden lg:flex absolute top-1 -right-4 h-2 w-8 items-center justify-center z-10">
-                  <div className="h-3 w-3 rounded-full bg-white border border-gray-200"></div>
+                <div className="hidden lg:flex absolute top-1 -right-4 h-1 w-8 items-center justify-center z-10">
+                  <div className="h-3 w-3 rounded-full bg-black"></div>
                 </div>
               )}
             </div>
