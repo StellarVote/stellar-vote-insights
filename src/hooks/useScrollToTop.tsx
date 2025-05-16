@@ -1,0 +1,16 @@
+
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+/**
+ * A hook that scrolls the page to the top when the route changes
+ */
+export const useScrollToTop = (): void => {
+  const { pathname } = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+};
+
+export default useScrollToTop;
