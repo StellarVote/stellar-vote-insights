@@ -93,6 +93,14 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+  
+  /* Smoother font rendering on mobile */
+  @media (max-width: 768px) {
+    html, body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
 }
 
 @layer utilities {
@@ -110,6 +118,15 @@
 
   .fade-in {
     animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
   }
 
   @keyframes fadeIn {

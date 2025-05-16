@@ -31,22 +31,23 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section id="how-it-works" className="py-20 px-6 md:px-12 lg:px-20">
+    <section id="how-it-works" className="py-16 md:py-20 px-4 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 fade-in">
+        <div className="text-center mb-12 md:mb-16 fade-in">
           <Badge variant="outline" className="mb-4 text-purple-600 border-purple-200 bg-purple-50 hover:bg-purple-100">Simple Process</Badge>
-          <h2 className="text-3xl md:text-4xl font-bold gradient-heading mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold gradient-heading mb-3 md:mb-4">
             How StellarVote Works
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             Turn your audience engagement into valuable insights in four simple steps
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Desktop view - horizontal steps with connecting lines */}
+        <div className="hidden lg:grid grid-cols-4 gap-8">
           {steps.map((step, index) => (
             <div key={index} className="relative fade-in" style={{ animationDelay: `${index * 150}ms` }}>
-              <div className={`h-2 w-full bg-gradient-to-r ${step.color} rounded-full mb-8 hidden lg:block ${index === steps.length - 1 ? 'opacity-0' : ''}`}></div>
+              <div className={`h-2 w-full bg-gradient-to-r ${step.color} rounded-full mb-8 ${index === steps.length - 1 ? 'opacity-0' : ''}`}></div>
               
               <div className="flex flex-col p-6 bg-white rounded-xl border border-gray-100 shadow-sm h-full">
                 <div className={`w-12 h-12 mb-6 flex items-center justify-center rounded-lg bg-gradient-to-r ${step.color} text-white font-bold`}>
@@ -57,10 +58,25 @@ const HowItWorksSection = () => {
               </div>
               
               {index < steps.length - 1 && (
-                <div className="hidden lg:flex absolute top-1 -right-4 h-2 w-8 items-center justify-center z-10">
+                <div className="absolute top-1 -right-4 h-2 w-8 items-center justify-center z-10">
                   <div className="h-3 w-3 rounded-full bg-white border border-gray-200"></div>
                 </div>
               )}
+            </div>
+          ))}
+        </div>
+        
+        {/* Mobile view - vertical steps with numbers */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:hidden">
+          {steps.map((step, index) => (
+            <div key={index} className="relative fade-in flex" style={{ animationDelay: `${index * 150}ms` }}>
+              <div className="flex flex-col p-5 bg-white rounded-xl border border-gray-100 shadow-sm h-full">
+                <div className={`w-10 h-10 mb-4 flex items-center justify-center rounded-lg bg-gradient-to-r ${step.color} text-white font-bold text-sm`}>
+                  {step.number}
+                </div>
+                <h3 className="text-lg font-bold mb-2">{step.title}</h3>
+                <p className="text-sm text-gray-600">{step.description}</p>
+              </div>
             </div>
           ))}
         </div>

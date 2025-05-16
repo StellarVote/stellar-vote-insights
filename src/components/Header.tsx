@@ -1,23 +1,34 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Menu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   
   const scrollToWaitlist = () => {
     const waitlistSection = document.getElementById('waitlist');
     if (waitlistSection) {
       waitlistSection.scrollIntoView({ behavior: 'smooth' });
+      setMobileMenuOpen(false);
     }
   };
 
   return (
-    <header className="w-full py-4 px-6 md:px-12 lg:px-20 flex items-center justify-between z-10 bg-white/90 backdrop-blur-sm sticky top-0">
+    <header className={`w-full py-3 md:py-4 px-4 md:px-12 lg:px-20 flex items-center justify-between z-20 sticky top-0 transition-all duration-200 ${isScrolled ? 'bg-white/95 shadow-sm backdrop-blur-sm' : 'bg-white/90 backdrop-blur-sm'}`}>
       <div className="flex items-center">
-        <Link to="/" className="h-10">
+        <Link to="/" className="h-8 md:h-10">
           <img src="/lovable-uploads/0c61eecc-b066-4207-b9d3-67a675d00c66.png" alt="StellarVote Logo" className="h-full" />
         </Link>
       </div>
@@ -30,49 +41,53 @@ const Header = () => {
       </nav>
       
       <div className="flex items-center">
-        <Button className="gradient-bg" onClick={scrollToWaitlist}>Join Waitlist</Button>
+        <Button className="gradient-bg text-sm px-4 py-2 h-9 md:h-10" onClick={scrollToWaitlist}>Join Waitlist</Button>
         <button
-          className="ml-4 p-2 rounded-md md:hidden text-gray-500 hover:bg-gray-100"
+          className="ml-2 p-1.5 rounded-md md:hidden text-gray-500 hover:bg-gray-100 focus:outline-none"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
         >
-          <Menu className="h-6 w-6" />
+          {mobileMenuOpen ? (
+            <X className="h-5 w-5" />
+          ) : (
+            <Menu className="h-5 w-5" />
+          )}
         </button>
       </div>
       
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden z-20">
-          <nav className="flex flex-col p-4">
+        <div className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden z-20 animate-fade-in">
+          <nav className="flex flex-col py-2">
             <Link 
               to="/brands" 
-              className="py-3 px-4 text-gray-700 hover:bg-gray-50"
+              className="py-3 px-6 text-gray-700 hover:bg-gray-50 text-base"
               onClick={() => setMobileMenuOpen(false)}
             >
               For Brands
             </Link>
             <Link 
               to="/influencers" 
-              className="py-3 px-4 text-gray-700 hover:bg-gray-50"
+              className="py-3 px-6 text-gray-700 hover:bg-gray-50 text-base"
               onClick={() => setMobileMenuOpen(false)}
             >
               For Influencers
             </Link>
             <Link 
               to="/about" 
-              className="py-3 px-4 text-gray-700 hover:bg-gray-50"
+              className="py-3 px-6 text-gray-700 hover:bg-gray-50 text-base"
               onClick={() => setMobileMenuOpen(false)}
             >
               About
             </Link>
-            <button
-              className="mt-2 py-3 px-4 text-left text-white bg-purple-600 rounded-md"
-              onClick={() => {
-                scrollToWaitlist();
-                setMobileMenuOpen(false);
-              }}
-            >
-              Join Waitlist
-            </button>
+            <div className="px-6 py-3">
+              <button
+                className="w-full py-2.5 px-4 text-center text-white font-medium bg-purple-600 rounded-md hover:bg-purple-700 transition-colors"
+                onClick={scrollToWaitlist}
+              >
+                Join Waitlist
+              </button>
+            </div>
           </nav>
         </div>
       )}
