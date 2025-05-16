@@ -19,11 +19,11 @@ const HeroSection = () => {
               </div>
               
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                Turn your followers' opinions into 
-                <span className="gradient-heading"> influence, insights & brand deals</span>
+                Discover what your audience 
+                <span className="gradient-heading"> loves</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-600 max-w-xl">
-                StellarVote helps influencers easily measure and prove their cultural impact with quick polls for their audience.
+                Share polls, gather insights, and attract brand partnerships with StellarVote's platform for influencers.
               </p>
             </div>
             
@@ -34,15 +34,15 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-6 pt-6 text-sm text-gray-500 fade-in" style={{ animationDelay: '400ms' }}>
               <div className="flex items-center gap-2">
                 <Vote className="h-5 w-5 text-purple-500" />
-                <span>1,200+ Polls Created</span>
+                <span>5,000+ Polls Created</span>
               </div>
               <div className="flex items-center gap-2">
                 <BarChart className="h-5 w-5 text-purple-500" />
-                <span>500K+ Votes Collected</span>
+                <span>3M+ Votes Collected</span>
               </div>
               <div className="flex items-center gap-2">
                 <TrendingUp className="h-5 w-5 text-purple-500" />
-                <span>400+ Influencer Success Stories</span>
+                <span>2,000+ Influencer Success Stories</span>
               </div>
             </div>
           </div>
