@@ -1,30 +1,84 @@
 
 import React from 'react';
-import Header from '@/components/Header';
-import HeroSection from '@/components/HeroSection';
-import FeatureSection from '@/components/FeatureSection';
-import DashboardPreview from '@/components/DashboardPreview';
-import HowItWorksSection from '@/components/HowItWorksSection';
-import TestimonialSection from '@/components/TestimonialSection';
-import CallToAction from '@/components/CallToAction';
-import Footer from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
+import TallyForm from '@/components/TallyForm';
+import { Vote, BarChart, TrendingUp, Instagram } from 'lucide-react';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-grow">
-        <HeroSection />
-        <FeatureSection />
-        <DashboardPreview />
-        <HowItWorksSection />
-        <TestimonialSection />
-        <div id="waitlist">
-          <CallToAction />
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+      {/* Header */}
+      <header className="w-full py-4 px-4 md:px-8 flex items-center justify-between">
+        <div className="flex items-center">
+          <img src="/lovable-uploads/d3338b83-6a24-4fbf-a604-35b7b7087f2e.png" alt="StellarVote Logo" className="h-8 md:h-10" />
+        </div>
+        <div className="flex items-center space-x-4">
+          <a 
+            href="https://www.instagram.com/stellarvote/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="w-9 h-9 rounded-full bg-white/80 hover:bg-white flex items-center justify-center transition-colors shadow-sm"
+          >
+            <Instagram className="w-4 h-4 text-gray-600" />
+          </a>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="flex-grow flex items-center justify-center px-4 md:px-8 py-8">
+        <div className="max-w-2xl mx-auto text-center space-y-8">
+          {/* Status Badge */}
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-100 text-purple-700 text-sm font-medium">
+            <span className="mr-2 relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-600"></span>
+            </span>
+            Early Access - Join the Waitlist
+          </div>
+
+          {/* Main Heading */}
+          <div className="space-y-4 fade-in">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+              Discover what your audience 
+              <span className="gradient-heading"> loves</span>
+            </h1>
+            <p className="text-lg md:text-xl text-gray-600 max-w-xl mx-auto">
+              Share polls, gather insights, and attract brand partnerships with StellarVote's platform for influencers.
+            </p>
+          </div>
+
+          {/* Signup Form */}
+          <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-xl border border-white/20 fade-in" style={{ animationDelay: '200ms' }}>
+            <div className="mb-6">
+              <h2 className="text-xl md:text-2xl font-semibold text-gray-900 mb-2">Get Early Access</h2>
+              <p className="text-gray-600">Be among the first to transform your audience engagement</p>
+            </div>
+            <TallyForm />
+          </div>
+
+          {/* Stats */}
+          <div className="flex flex-col sm:flex-row gap-6 pt-4 text-sm text-gray-500 fade-in justify-center" style={{ animationDelay: '400ms' }}>
+            <div className="flex items-center gap-2 justify-center">
+              <Vote className="h-5 w-5 text-purple-500" />
+              <span>100+ Polls Created</span>
+            </div>
+            <div className="flex items-center gap-2 justify-center">
+              <BarChart className="h-5 w-5 text-purple-500" />
+              <span>5K+ Votes Collected</span>
+            </div>
+            <div className="flex items-center gap-2 justify-center">
+              <TrendingUp className="h-5 w-5 text-purple-500" />
+              <span>50+ Beta Testers</span>
+            </div>
+          </div>
         </div>
       </main>
-      <Footer />
+
+      {/* Footer */}
+      <footer className="py-6 px-4 md:px-8 text-center text-sm text-gray-500 border-t border-gray-200/50">
+        <p>© 2025 StellarVote. All rights reserved.</p>
+      </footer>
+
       <Toaster />
     </div>
   );
