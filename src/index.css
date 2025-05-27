@@ -90,7 +90,7 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gray-900 text-white;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
   
@@ -105,11 +105,11 @@
 
 @layer utilities {
   .gradient-heading {
-    @apply bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent;
   }
   
   .gradient-bg {
-    @apply bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-700;
+    @apply bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 hover:from-purple-500 hover:via-blue-500 hover:to-cyan-500;
   }
   
   .scale-up-hover {
@@ -129,6 +129,14 @@
     display: none;
   }
 
+  .glass-effect {
+    @apply bg-gray-800/20 backdrop-blur-xl border border-gray-700/30;
+  }
+
+  .dark-card {
+    @apply bg-gray-800/40 backdrop-blur-xl border border-gray-700/50 shadow-2xl;
+  }
+
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -138,5 +146,25 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
   }
 }
