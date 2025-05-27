@@ -70,10 +70,6 @@ const Index = () => {
               <BarChart className="h-5 w-5 text-blue-300 flex-shrink-0" />
               <span className="font-medium"><span className="text-2xl font-bold text-white">150K+</span> Votes Collected</span>
             </div>
-            <div className="flex items-center gap-3 justify-center">
-              <TrendingUp className="h-5 w-5 text-cyan-300 flex-shrink-0" />
-              <span className="font-medium"><span className="text-2xl font-bold text-white">1.2K+</span> Beta Testers</span>
-            </div>
           </div>
         </div>
       </main>
@@ -101,12 +97,8 @@ const Index = () => {
             
             {/* Chanel */}
             <div className="flex items-center justify-center">
-              <div className="relative text-gray-300">
-                <div className="flex items-center justify-center space-x-1">
-                  <div className="w-8 h-8 rounded-full border-2 border-current"></div>
-                  <div className="w-8 h-8 rounded-full border-2 border-current -ml-3"></div>
-                </div>
-                <div className="text-xs font-bold tracking-widest text-center mt-1">CHANEL</div>
+              <div className="text-gray-300 font-bold text-xl tracking-[0.2em] text-center">
+                CHANEL
               </div>
             </div>
             
