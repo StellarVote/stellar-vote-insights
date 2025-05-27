@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Toaster } from '@/components/ui/toaster';
 import TallyForm from '@/components/TallyForm';
@@ -77,6 +76,42 @@ const Index = () => {
           </div>
         </div>
       </main>
+
+      {/* Brand Partners Section */}
+      <section className="py-12 px-4 md:px-8 border-t border-gray-700/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-gray-400 text-sm mb-8 font-medium">Trusted by leading brands</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center opacity-60 hover:opacity-80 transition-opacity duration-300">
+            {/* L'Oréal */}
+            <div className="flex items-center justify-center">
+              <svg width="100" height="24" viewBox="0 0 120 24" fill="none" className="text-gray-300">
+                <text x="0" y="18" className="fill-current font-bold text-lg tracking-wide">L'ORÉAL</text>
+              </svg>
+            </div>
+            
+            {/* Calvin Klein */}
+            <div className="flex items-center justify-center">
+              <svg width="80" height="24" viewBox="0 0 80 24" fill="none" className="text-gray-300">
+                <text x="0" y="18" className="fill-current font-bold text-base tracking-wider">CALVIN KLEIN</text>
+              </svg>
+            </div>
+            
+            {/* Chanel */}
+            <div className="flex items-center justify-center">
+              <svg width="70" height="24" viewBox="0 0 70 24" fill="none" className="text-gray-300">
+                <text x="0" y="18" className="fill-current font-bold text-lg tracking-wide">CHANEL</text>
+              </svg>
+            </div>
+            
+            {/* Gucci */}
+            <div className="flex items-center justify-center">
+              <svg width="60" height="24" viewBox="0 0 60 24" fill="none" className="text-gray-300">
+                <text x="0" y="18" className="fill-current font-bold text-lg tracking-wide">GUCCI</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="py-6 px-4 md:px-8 text-center text-sm text-gray-400 border-t border-gray-700/50">
