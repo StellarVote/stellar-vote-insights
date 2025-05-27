@@ -112,9 +112,8 @@ const Index = () => {
             {/* Gucci */}
             <div className="flex items-center justify-center">
               <svg width="90" height="60" viewBox="0 0 90 60" fill="none" className="text-gray-300">
-                <text x="45" y="22" textAnchor="middle" className="fill-current font-bold text-2xl tracking-wider">G</text>
-                <circle cx="45" cy="30" r="22" fill="none" stroke="currentColor" strokeWidth="0.5"/>
-                <text x="45" y="42" textAnchor="middle" className="fill-current font-bold text-sm tracking-wider">GUCCI</text>
+                <text x="45" y="32" textAnchor="middle" className="fill-current font-bold text-lg tracking-wider">GUCCI</text>
+                <line x1="20" y1="38" x2="70" y2="38" stroke="currentColor" strokeWidth="0.5"/>
               </svg>
             </div>
 
@@ -130,11 +129,8 @@ const Index = () => {
             {/* Versace */}
             <div className="flex items-center justify-center">
               <svg width="120" height="60" viewBox="0 0 120 60" fill="none" className="text-gray-300">
-                <circle cx="60" cy="30" r="20" fill="none" stroke="currentColor" strokeWidth="0.5"/>
-                <path d="M60 15 L55 25 L60 30 L65 25 Z" fill="currentColor"/>
-                <path d="M45 30 L50 35 L60 30 L50 25 Z" fill="currentColor"/>
-                <path d="M75 30 L70 35 L60 30 L70 25 Z" fill="currentColor"/>
-                <text x="60" y="48" textAnchor="middle" className="fill-current font-bold text-xs tracking-wider">VERSACE</text>
+                <text x="60" y="32" textAnchor="middle" className="fill-current font-bold text-lg tracking-wider">VERSACE</text>
+                <line x1="25" y1="38" x2="95" y2="38" stroke="currentColor" strokeWidth="0.5"/>
               </svg>
             </div>
           </div>
