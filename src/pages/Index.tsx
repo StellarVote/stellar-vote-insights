@@ -64,15 +64,15 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-6 pt-4 text-sm sm:text-base text-gray-300 fade-in justify-center px-4" style={{ animationDelay: '400ms' }}>
             <div className="flex items-center gap-3 justify-center">
               <Vote className="h-5 w-5 text-purple-300 flex-shrink-0" />
-              <span className="font-medium">100+ Polls Created</span>
+              <span className="font-medium"><span className="text-2xl font-bold text-white">2.5K+</span> Polls Created</span>
             </div>
             <div className="flex items-center gap-3 justify-center">
               <BarChart className="h-5 w-5 text-blue-300 flex-shrink-0" />
-              <span className="font-medium">5K+ Votes Collected</span>
+              <span className="font-medium"><span className="text-2xl font-bold text-white">150K+</span> Votes Collected</span>
             </div>
             <div className="flex items-center gap-3 justify-center">
               <TrendingUp className="h-5 w-5 text-cyan-300 flex-shrink-0" />
-              <span className="font-medium">50+ Beta Testers</span>
+              <span className="font-medium"><span className="text-2xl font-bold text-white">1.2K+</span> Beta Testers</span>
             </div>
           </div>
         </div>
@@ -85,50 +85,51 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 items-center justify-items-center opacity-60 hover:opacity-80 transition-opacity duration-300">
             {/* L'Oréal */}
             <div className="flex items-center justify-center">
-              <svg width="140" height="60" viewBox="0 0 140 60" fill="none" className="text-gray-300">
-                <text x="70" y="32" textAnchor="middle" className="fill-current font-bold text-lg tracking-wider">L'ORÉAL</text>
-                <text x="70" y="44" textAnchor="middle" className="fill-current text-sm">PARIS</text>
-              </svg>
+              <div className="text-gray-300 font-bold text-xl tracking-widest">
+                L'ORÉAL
+                <div className="text-xs tracking-wider font-normal">PARIS</div>
+              </div>
             </div>
             
             {/* Calvin Klein */}
             <div className="flex items-center justify-center">
-              <svg width="120" height="60" viewBox="0 0 120 60" fill="none" className="text-gray-300">
-                <text x="60" y="26" textAnchor="middle" className="fill-current font-bold text-sm tracking-wider">CALVIN</text>
-                <text x="60" y="38" textAnchor="middle" className="fill-current font-bold text-sm tracking-wider">KLEIN</text>
-              </svg>
+              <div className="text-gray-300 font-bold text-lg tracking-widest text-center">
+                <div>CALVIN</div>
+                <div>KLEIN</div>
+              </div>
             </div>
             
             {/* Chanel */}
             <div className="flex items-center justify-center">
-              <svg width="100" height="60" viewBox="0 0 100 60" fill="none" className="text-gray-300">
-                <circle cx="30" cy="30" r="18" fill="none" stroke="currentColor" strokeWidth="0.5"/>
-                <circle cx="70" cy="30" r="18" fill="none" stroke="currentColor" strokeWidth="0.5"/>
-                <path d="M30 12 C45 22, 55 22, 70 12" stroke="currentColor" strokeWidth="0.5" fill="none"/>
-                <path d="M30 48 C45 38, 55 38, 70 48" stroke="currentColor" strokeWidth="0.5" fill="none"/>
-              </svg>
+              <div className="relative text-gray-300">
+                <div className="flex items-center justify-center space-x-1">
+                  <div className="w-8 h-8 rounded-full border-2 border-current"></div>
+                  <div className="w-8 h-8 rounded-full border-2 border-current -ml-3"></div>
+                </div>
+                <div className="text-xs font-bold tracking-widest text-center mt-1">CHANEL</div>
+              </div>
             </div>
             
             {/* Gucci */}
             <div className="flex items-center justify-center">
-              <svg width="90" height="60" viewBox="0 0 90 60" fill="none" className="text-gray-300">
-                <text x="45" y="32" textAnchor="middle" className="fill-current font-bold text-lg tracking-wider">GUCCI</text>
-              </svg>
+              <div className="text-gray-300 font-bold text-xl tracking-widest">
+                GUCCI
+              </div>
             </div>
 
             {/* Prada */}
             <div className="flex items-center justify-center">
-              <svg width="110" height="60" viewBox="0 0 110 60" fill="none" className="text-gray-300">
-                <text x="55" y="32" textAnchor="middle" className="fill-current font-bold text-lg tracking-wider">PRADA</text>
-                <text x="55" y="48" textAnchor="middle" className="fill-current text-xs tracking-wider">MILANO</text>
-              </svg>
+              <div className="text-gray-300 font-bold text-xl tracking-widest text-center">
+                PRADA
+                <div className="text-xs tracking-wider font-normal">MILANO</div>
+              </div>
             </div>
 
             {/* Versace */}
             <div className="flex items-center justify-center">
-              <svg width="120" height="60" viewBox="0 0 120 60" fill="none" className="text-gray-300">
-                <text x="60" y="32" textAnchor="middle" className="fill-current font-bold text-lg tracking-wider">VERSACE</text>
-              </svg>
+              <div className="text-gray-300 font-bold text-xl tracking-widest">
+                VERSACE
+              </div>
             </div>
           </div>
         </div>
