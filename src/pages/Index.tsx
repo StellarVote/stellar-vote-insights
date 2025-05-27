@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Toaster } from '@/components/ui/toaster';
 import TallyForm from '@/components/TallyForm';
@@ -81,39 +82,59 @@ const Index = () => {
       <section className="py-12 px-4 md:px-8 border-t border-gray-700/30">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-gray-400 text-sm mb-8 font-medium">Trusted by leading brands</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center opacity-60 hover:opacity-80 transition-opacity duration-300">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 items-center justify-items-center opacity-60 hover:opacity-80 transition-opacity duration-300">
             {/* L'Oréal */}
             <div className="flex items-center justify-center">
-              <svg width="100" height="40" viewBox="0 0 100 40" fill="none" className="text-gray-300">
-                <text x="50" y="22" textAnchor="middle" className="fill-current font-bold text-sm tracking-wider">L'ORÉAL</text>
-                <text x="50" y="30" textAnchor="middle" className="fill-current text-xs">PARIS</text>
+              <svg width="140" height="60" viewBox="0 0 140 60" fill="none" className="text-gray-300">
+                <text x="70" y="32" textAnchor="middle" className="fill-current font-bold text-lg tracking-wider">L'ORÉAL</text>
+                <text x="70" y="44" textAnchor="middle" className="fill-current text-sm">PARIS</text>
               </svg>
             </div>
             
             {/* Calvin Klein */}
             <div className="flex items-center justify-center">
-              <svg width="80" height="40" viewBox="0 0 80 40" fill="none" className="text-gray-300">
-                <text x="40" y="18" textAnchor="middle" className="fill-current font-bold text-xs tracking-wider">CALVIN</text>
-                <text x="40" y="26" textAnchor="middle" className="fill-current font-bold text-xs tracking-wider">KLEIN</text>
+              <svg width="120" height="60" viewBox="0 0 120 60" fill="none" className="text-gray-300">
+                <text x="60" y="26" textAnchor="middle" className="fill-current font-bold text-sm tracking-wider">CALVIN</text>
+                <text x="60" y="38" textAnchor="middle" className="fill-current font-bold text-sm tracking-wider">KLEIN</text>
               </svg>
             </div>
             
             {/* Chanel */}
             <div className="flex items-center justify-center">
-              <svg width="70" height="40" viewBox="0 0 70 40" fill="none" className="text-gray-300">
-                <circle cx="20" cy="20" r="12" fill="none" stroke="currentColor" strokeWidth="0.5"/>
-                <circle cx="50" cy="20" r="12" fill="none" stroke="currentColor" strokeWidth="0.5"/>
-                <path d="M20 8 C30 15, 40 15, 50 8" stroke="currentColor" strokeWidth="0.5" fill="none"/>
-                <path d="M20 32 C30 25, 40 25, 50 32" stroke="currentColor" strokeWidth="0.5" fill="none"/>
+              <svg width="100" height="60" viewBox="0 0 100 60" fill="none" className="text-gray-300">
+                <circle cx="30" cy="30" r="18" fill="none" stroke="currentColor" strokeWidth="0.5"/>
+                <circle cx="70" cy="30" r="18" fill="none" stroke="currentColor" strokeWidth="0.5"/>
+                <path d="M30 12 C45 22, 55 22, 70 12" stroke="currentColor" strokeWidth="0.5" fill="none"/>
+                <path d="M30 48 C45 38, 55 38, 70 48" stroke="currentColor" strokeWidth="0.5" fill="none"/>
               </svg>
             </div>
             
             {/* Gucci */}
             <div className="flex items-center justify-center">
-              <svg width="60" height="40" viewBox="0 0 60 40" fill="none" className="text-gray-300">
-                <text x="30" y="15" textAnchor="middle" className="fill-current font-bold text-lg tracking-wider">G</text>
-                <circle cx="30" cy="20" r="15" fill="none" stroke="currentColor" strokeWidth="0.5"/>
-                <text x="30" y="28" textAnchor="middle" className="fill-current font-bold text-xs tracking-wider">GUCCI</text>
+              <svg width="90" height="60" viewBox="0 0 90 60" fill="none" className="text-gray-300">
+                <text x="45" y="22" textAnchor="middle" className="fill-current font-bold text-2xl tracking-wider">G</text>
+                <circle cx="45" cy="30" r="22" fill="none" stroke="currentColor" strokeWidth="0.5"/>
+                <text x="45" y="42" textAnchor="middle" className="fill-current font-bold text-sm tracking-wider">GUCCI</text>
+              </svg>
+            </div>
+
+            {/* Prada */}
+            <div className="flex items-center justify-center">
+              <svg width="110" height="60" viewBox="0 0 110 60" fill="none" className="text-gray-300">
+                <text x="55" y="32" textAnchor="middle" className="fill-current font-bold text-lg tracking-wider">PRADA</text>
+                <line x1="20" y1="40" x2="90" y2="40" stroke="currentColor" strokeWidth="0.5"/>
+                <text x="55" y="48" textAnchor="middle" className="fill-current text-xs tracking-wider">MILANO</text>
+              </svg>
+            </div>
+
+            {/* Versace */}
+            <div className="flex items-center justify-center">
+              <svg width="120" height="60" viewBox="0 0 120 60" fill="none" className="text-gray-300">
+                <circle cx="60" cy="30" r="20" fill="none" stroke="currentColor" strokeWidth="0.5"/>
+                <path d="M60 15 L55 25 L60 30 L65 25 Z" fill="currentColor"/>
+                <path d="M45 30 L50 35 L60 30 L50 25 Z" fill="currentColor"/>
+                <path d="M75 30 L70 35 L60 30 L70 25 Z" fill="currentColor"/>
+                <text x="60" y="48" textAnchor="middle" className="fill-current font-bold text-xs tracking-wider">VERSACE</text>
               </svg>
             </div>
           </div>
