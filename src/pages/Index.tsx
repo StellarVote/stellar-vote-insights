@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Toaster } from '@/components/ui/toaster';
 import TallyForm from '@/components/TallyForm';
@@ -10,7 +9,11 @@ const Index = () => {
       {/* Header */}
       <header className="w-full py-4 px-4 md:px-8 flex items-center justify-between">
         <div className="flex items-center">
-          <img src="/lovable-uploads/d3338b83-6a24-4fbf-a604-35b7b7087f2e.png" alt="StellarVote Logo" className="h-8 md:h-10" />
+          <img 
+            src="/lovable-uploads/d3338b83-6a24-4fbf-a604-35b7b7087f2e.png" 
+            alt="StellarVote Logo" 
+            className="h-8 md:h-10 brightness-0 invert" 
+          />
         </div>
         <div className="flex items-center space-x-4">
           <a 
