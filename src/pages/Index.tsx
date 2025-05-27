@@ -113,7 +113,6 @@ const Index = () => {
             <div className="flex items-center justify-center">
               <svg width="90" height="60" viewBox="0 0 90 60" fill="none" className="text-gray-300">
                 <text x="45" y="32" textAnchor="middle" className="fill-current font-bold text-lg tracking-wider">GUCCI</text>
-                <line x1="20" y1="38" x2="70" y2="38" stroke="currentColor" strokeWidth="0.5"/>
               </svg>
             </div>
 
@@ -121,7 +120,6 @@ const Index = () => {
             <div className="flex items-center justify-center">
               <svg width="110" height="60" viewBox="0 0 110 60" fill="none" className="text-gray-300">
                 <text x="55" y="32" textAnchor="middle" className="fill-current font-bold text-lg tracking-wider">PRADA</text>
-                <line x1="20" y1="40" x2="90" y2="40" stroke="currentColor" strokeWidth="0.5"/>
                 <text x="55" y="48" textAnchor="middle" className="fill-current text-xs tracking-wider">MILANO</text>
               </svg>
             </div>
@@ -130,7 +128,6 @@ const Index = () => {
             <div className="flex items-center justify-center">
               <svg width="120" height="60" viewBox="0 0 120 60" fill="none" className="text-gray-300">
                 <text x="60" y="32" textAnchor="middle" className="fill-current font-bold text-lg tracking-wider">VERSACE</text>
-                <line x1="25" y1="38" x2="95" y2="38" stroke="currentColor" strokeWidth="0.5"/>
               </svg>
             </div>
           </div>
