@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Toaster } from '@/components/ui/toaster';
 import TallyForm from '@/components/TallyForm';
@@ -84,29 +85,38 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center opacity-60 hover:opacity-80 transition-opacity duration-300">
             {/* L'Oréal */}
             <div className="flex items-center justify-center">
-              <svg width="100" height="24" viewBox="0 0 120 24" fill="none" className="text-gray-300">
-                <text x="0" y="18" className="fill-current font-bold text-lg tracking-wide">L'ORÉAL</text>
+              <svg width="100" height="40" viewBox="0 0 100 40" fill="none" className="text-gray-300">
+                <path d="M10 8h80v24H10z" fill="none" stroke="currentColor" strokeWidth="0.5"/>
+                <text x="50" y="22" textAnchor="middle" className="fill-current font-bold text-sm tracking-wider">L'ORÉAL</text>
+                <text x="50" y="30" textAnchor="middle" className="fill-current text-xs">PARIS</text>
               </svg>
             </div>
             
             {/* Calvin Klein */}
             <div className="flex items-center justify-center">
-              <svg width="80" height="24" viewBox="0 0 80 24" fill="none" className="text-gray-300">
-                <text x="0" y="18" className="fill-current font-bold text-base tracking-wider">CALVIN KLEIN</text>
+              <svg width="80" height="40" viewBox="0 0 80 40" fill="none" className="text-gray-300">
+                <rect x="5" y="10" width="70" height="20" fill="none" stroke="currentColor" strokeWidth="0.5"/>
+                <text x="40" y="18" textAnchor="middle" className="fill-current font-bold text-xs tracking-wider">CALVIN</text>
+                <text x="40" y="26" textAnchor="middle" className="fill-current font-bold text-xs tracking-wider">KLEIN</text>
               </svg>
             </div>
             
             {/* Chanel */}
             <div className="flex items-center justify-center">
-              <svg width="70" height="24" viewBox="0 0 70 24" fill="none" className="text-gray-300">
-                <text x="0" y="18" className="fill-current font-bold text-lg tracking-wide">CHANEL</text>
+              <svg width="70" height="40" viewBox="0 0 70 40" fill="none" className="text-gray-300">
+                <circle cx="20" cy="20" r="12" fill="none" stroke="currentColor" strokeWidth="1"/>
+                <circle cx="50" cy="20" r="12" fill="none" stroke="currentColor" strokeWidth="1"/>
+                <path d="M20 8 C30 15, 40 15, 50 8" stroke="currentColor" strokeWidth="1" fill="none"/>
+                <path d="M20 32 C30 25, 40 25, 50 32" stroke="currentColor" strokeWidth="1" fill="none"/>
               </svg>
             </div>
             
             {/* Gucci */}
             <div className="flex items-center justify-center">
-              <svg width="60" height="24" viewBox="0 0 60 24" fill="none" className="text-gray-300">
-                <text x="0" y="18" className="fill-current font-bold text-lg tracking-wide">GUCCI</text>
+              <svg width="60" height="40" viewBox="0 0 60 40" fill="none" className="text-gray-300">
+                <text x="30" y="15" textAnchor="middle" className="fill-current font-bold text-lg tracking-wider">G</text>
+                <circle cx="30" cy="20" r="15" fill="none" stroke="currentColor" strokeWidth="1"/>
+                <text x="30" y="28" textAnchor="middle" className="fill-current font-bold text-xs tracking-wider">GUCCI</text>
               </svg>
             </div>
           </div>
