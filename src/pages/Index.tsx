@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Toaster } from '@/components/ui/toaster';
 import TallyForm from '@/components/TallyForm';
@@ -86,7 +85,6 @@ const Index = () => {
             {/* L'Oréal */}
             <div className="flex items-center justify-center">
               <svg width="100" height="40" viewBox="0 0 100 40" fill="none" className="text-gray-300">
-                <path d="M10 8h80v24H10z" fill="none" stroke="currentColor" strokeWidth="0.5"/>
                 <text x="50" y="22" textAnchor="middle" className="fill-current font-bold text-sm tracking-wider">L'ORÉAL</text>
                 <text x="50" y="30" textAnchor="middle" className="fill-current text-xs">PARIS</text>
               </svg>
@@ -95,7 +93,6 @@ const Index = () => {
             {/* Calvin Klein */}
             <div className="flex items-center justify-center">
               <svg width="80" height="40" viewBox="0 0 80 40" fill="none" className="text-gray-300">
-                <rect x="5" y="10" width="70" height="20" fill="none" stroke="currentColor" strokeWidth="0.5"/>
                 <text x="40" y="18" textAnchor="middle" className="fill-current font-bold text-xs tracking-wider">CALVIN</text>
                 <text x="40" y="26" textAnchor="middle" className="fill-current font-bold text-xs tracking-wider">KLEIN</text>
               </svg>
@@ -104,10 +101,10 @@ const Index = () => {
             {/* Chanel */}
             <div className="flex items-center justify-center">
               <svg width="70" height="40" viewBox="0 0 70 40" fill="none" className="text-gray-300">
-                <circle cx="20" cy="20" r="12" fill="none" stroke="currentColor" strokeWidth="1"/>
-                <circle cx="50" cy="20" r="12" fill="none" stroke="currentColor" strokeWidth="1"/>
-                <path d="M20 8 C30 15, 40 15, 50 8" stroke="currentColor" strokeWidth="1" fill="none"/>
-                <path d="M20 32 C30 25, 40 25, 50 32" stroke="currentColor" strokeWidth="1" fill="none"/>
+                <circle cx="20" cy="20" r="12" fill="none" stroke="currentColor" strokeWidth="0.5"/>
+                <circle cx="50" cy="20" r="12" fill="none" stroke="currentColor" strokeWidth="0.5"/>
+                <path d="M20 8 C30 15, 40 15, 50 8" stroke="currentColor" strokeWidth="0.5" fill="none"/>
+                <path d="M20 32 C30 25, 40 25, 50 32" stroke="currentColor" strokeWidth="0.5" fill="none"/>
               </svg>
             </div>
             
@@ -115,7 +112,7 @@ const Index = () => {
             <div className="flex items-center justify-center">
               <svg width="60" height="40" viewBox="0 0 60 40" fill="none" className="text-gray-300">
                 <text x="30" y="15" textAnchor="middle" className="fill-current font-bold text-lg tracking-wider">G</text>
-                <circle cx="30" cy="20" r="15" fill="none" stroke="currentColor" strokeWidth="1"/>
+                <circle cx="30" cy="20" r="15" fill="none" stroke="currentColor" strokeWidth="0.5"/>
                 <text x="30" y="28" textAnchor="middle" className="fill-current font-bold text-xs tracking-wider">GUCCI</text>
               </svg>
             </div>
