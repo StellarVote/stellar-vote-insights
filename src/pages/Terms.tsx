@@ -16,21 +16,18 @@ const Terms = () => {
           
           <div className="space-y-10">
             <section>
-              <h2 className="text-2xl font-semibold mb-4">1. Agreement to Terms</h2>
+              <h2 className="text-2xl font-semibold mb-4">1. Acceptance of Terms</h2>
               <p className="text-gray-600 mb-4">
-                These Terms of Service constitute a legally binding agreement made between you and StellarVote ("we," "our," or "us"), concerning your access to and use of the StellarVote website and services.
-              </p>
-              <p className="text-gray-600">
-                By accessing or using StellarVote, you agree to be bound by these Terms. If you disagree with any part of these terms, you may not access our services.
+                By accessing or using StellarVote ("the Service"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the Service.
               </p>
             </section>
             
             <Separator />
             
             <section>
-              <h2 className="text-2xl font-semibold mb-4">2. Services Description</h2>
-              <p className="text-gray-600">
-                StellarVote provides a platform for influencers to create polls, collect audience insights, and connect with brands. Our services may include audience analytics, content optimization recommendations, and connection to potential brand partnerships based on audience data and preferences.
+              <h2 className="text-2xl font-semibold mb-4">2. Description of Service</h2>
+              <p className="text-gray-600 mb-4">
+                StellarVote is a platform that enables influencers and content creators to create polls, gather audience insights, and connect with brands. The Service includes web-based tools, analytics, and related features.
               </p>
             </section>
             
@@ -38,86 +35,70 @@ const Terms = () => {
             
             <section>
               <h2 className="text-2xl font-semibold mb-4">3. User Accounts</h2>
-              <div className="mb-4">
-                <h3 className="text-xl font-medium mb-2">Account Registration</h3>
-                <p className="text-gray-600">
-                  To access certain features of our platform, you must register for an account. You agree to provide accurate, current, and complete information during the registration process and to update such information to keep it accurate, current, and complete.
-                </p>
-              </div>
-              
-              <div className="mb-4">
-                <h3 className="text-xl font-medium mb-2">Account Security</h3>
-                <p className="text-gray-600">
-                  You are responsible for safeguarding the password that you use to access our services and for any activities or actions under your account. We encourage you to use "strong" passwords with your account.
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-medium mb-2">Account Termination</h3>
-                <p className="text-gray-600">
-                  We reserve the right to suspend or terminate your account if you violate these Terms or if your account has been inactive for an extended period.
-                </p>
-              </div>
-            </section>
-            
-            <Separator />
-            
-            <section>
-              <h2 className="text-2xl font-semibold mb-4">4. User Content</h2>
               <p className="text-gray-600 mb-4">
-                Our platform may allow you to create, upload, or share content. You retain ownership of all content you submit, but grant us a license to use, modify, display, and distribute that content in connection with our services.
-              </p>
-              <p className="text-gray-600">
-                You are solely responsible for your content and must have all necessary rights to submit it. Content that violates our guidelines or applicable laws may be removed, and repeated violations may result in account termination.
-              </p>
-            </section>
-            
-            <Separator />
-            
-            <section>
-              <h2 className="text-2xl font-semibold mb-4">5. Prohibited Activities</h2>
-              <p className="text-gray-600 mb-4">
-                You agree not to:
+                To access certain features of the Service, you may be required to create an account. You are responsible for:
               </p>
               <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
-                <li>Use our services for any illegal purpose</li>
-                <li>Violate any applicable laws or regulations</li>
-                <li>Infringe upon the rights of others</li>
-                <li>Submit false or misleading information</li>
-                <li>Upload or transmit viruses or malicious code</li>
-                <li>Attempt to interfere with or disrupt our services</li>
-                <li>Access or use our services in an unauthorized manner</li>
-                <li>Collect user information without permission</li>
+                <li>Maintaining the confidentiality of your account credentials</li>
+                <li>All activities that occur under your account</li>
+                <li>Providing accurate and up-to-date information</li>
+                <li>Notifying us immediately of any unauthorized use</li>
               </ul>
             </section>
             
             <Separator />
             
             <section>
-              <h2 className="text-2xl font-semibold mb-4">6. Intellectual Property</h2>
+              <h2 className="text-2xl font-semibold mb-4">4. Acceptable Use</h2>
               <p className="text-gray-600 mb-4">
-                The StellarVote platform, including its original content, features, functionality, and design, is owned by StellarVote and protected by copyright, trademark, and other intellectual property laws.
+                You agree not to use the Service to:
+              </p>
+              <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                <li>Violate any applicable laws or regulations</li>
+                <li>Infringe on the rights of others</li>
+                <li>Upload harmful, offensive, or inappropriate content</li>
+                <li>Spam or send unsolicited communications</li>
+                <li>Attempt to gain unauthorized access to our systems</li>
+                <li>Use the Service for any commercial purpose without authorization</li>
+              </ul>
+            </section>
+            
+            <Separator />
+            
+            <section>
+              <h2 className="text-2xl font-semibold mb-4">5. Content and Intellectual Property</h2>
+              <p className="text-gray-600 mb-4">
+                You retain ownership of content you create using our Service. However, by using StellarVote, you grant us a license to use, display, and distribute your content as necessary to provide the Service.
               </p>
               <p className="text-gray-600">
-                Our name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of StellarVote or its affiliates or licensors. You must not use such marks without our prior written permission.
+                StellarVote and its features are protected by intellectual property laws. You may not copy, modify, or distribute our proprietary technology without permission.
               </p>
             </section>
             
             <Separator />
             
             <section>
-              <h2 className="text-2xl font-semibold mb-4">7. Disclaimers</h2>
+              <h2 className="text-2xl font-semibold mb-4">6. Privacy</h2>
               <p className="text-gray-600">
-                Our services are provided "as is" and "as available" without warranties of any kind, either express or implied. We do not guarantee that our services will meet your requirements, be available on an uninterrupted, timely, secure, or error-free basis, or that the results that may be obtained from the use of our services will be accurate or reliable.
+                Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your information.
               </p>
             </section>
             
             <Separator />
             
             <section>
-              <h2 className="text-2xl font-semibold mb-4">8. Limitation of Liability</h2>
+              <h2 className="text-2xl font-semibold mb-4">7. Limitation of Liability</h2>
               <p className="text-gray-600">
-                To the maximum extent permitted by law, StellarVote shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or goodwill, arising from or in connection with your access to or use of our services or your inability to access or use our services.
+                StellarVote is provided "as is" without warranties of any kind. We shall not be liable for any indirect, incidental, or consequential damages arising from your use of the Service.
+              </p>
+            </section>
+            
+            <Separator />
+            
+            <section>
+              <h2 className="text-2xl font-semibold mb-4">8. Termination</h2>
+              <p className="text-gray-600">
+                We may terminate or suspend your account at our discretion, without prior notice, for conduct that we believe violates these Terms or is harmful to other users or the Service.
               </p>
             </section>
             
@@ -126,16 +107,16 @@ const Terms = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-4">9. Changes to Terms</h2>
               <p className="text-gray-600">
-                We reserve the right to modify these Terms at any time. If we make material changes, we will notify you by email or by posting a notice on our website prior to the changes becoming effective.
+                We reserve the right to modify these Terms at any time. We will notify users of significant changes via email or through the Service.
               </p>
             </section>
             
             <Separator />
             
             <section>
-              <h2 className="text-2xl font-semibold mb-4">10. Contact Us</h2>
+              <h2 className="text-2xl font-semibold mb-4">10. Contact Information</h2>
               <p className="text-gray-600">
-                If you have any questions about these Terms of Service, please contact us at:
+                If you have questions about these Terms, please contact us at:
               </p>
               <p className="mt-4">
                 <strong>Email:</strong> <a href="mailto:legal@stellarvote.com" className="text-purple-600 hover:underline">legal@stellarvote.com</a>
